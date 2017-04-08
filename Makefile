@@ -17,7 +17,7 @@ embedmd:
 
 .PHONY: test
 test:
-	go test -v ./example/...
+	go test -v ./test/...
 
 clean:
 	rm -rf go-twzipcode.so twzipcode/twzipcode.go
