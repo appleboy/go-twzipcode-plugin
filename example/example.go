@@ -1,30 +1,3 @@
-# go-twzipcode-plugin
-
-Go plugin with TWZipCode
-
-## Installation
-
-install `go-bindata` tool
-
-```sh
-$ go get -u github.com/jteeuwen/go-bindata/...
-```
-
-generate bind data.
-
-```sh
-$ go-bindata -pkg twzipcode -o twzipcode/twzipcode.go twzipcode/twzipcode.json
-```
-
-build plugin
-
-```sh
-$ go build -buildmode=plugin -o go-twzipcode.so go-twzipcode.go
-```
-
-## Example
-
-```go
 package main
 
 import (
@@ -54,4 +27,3 @@ func main() {
 	code, _ = getTWZipCode("高雄市", "苓雅區")
 	log.Println("高雄市苓雅區:", code)
 }
-```
