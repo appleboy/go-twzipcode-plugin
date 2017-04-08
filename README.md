@@ -24,6 +24,7 @@ $ go build -buildmode=plugin -o go-twzipcode.so go-twzipcode.go
 
 ## Example
 
+[embedmd]:# (example/example.go go)
 ```go
 package main
 
