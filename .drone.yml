@@ -21,9 +21,3 @@ pipeline:
     fb_verify_token: ${FB_VERIFY_TOKEN}
     when:
       status: [ success, failure ]
-
-matrix:
-  GO_VERSION:
-    - 1.6.4
-    - 1.7.5
-    - 1.8.0
