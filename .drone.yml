@@ -21,3 +21,12 @@ pipeline:
     fb_verify_token: ${FB_VERIFY_TOKEN}
     when:
       status: [ success, failure ]
+
+  github:
+    image: plugins/github-release
+    api_key: ${GITHUB_RELEASE_API_KEY}
+    files:
+      - go-twzipcode.so
+    when:
+      event: [ tag ]
+      branch: [ refs/tags/* ]
