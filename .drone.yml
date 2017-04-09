@@ -13,15 +13,6 @@ pipeline:
       - make plugin
       - make test
 
-  facebook:
-    image: appleboy/drone-facebook
-    pull: true
-    to: 1234973386524610
-    fb_page_token: ${FB_PAGE_TOKEN}
-    fb_verify_token: ${FB_VERIFY_TOKEN}
-    when:
-      status: [ success, failure ]
-
   github:
     image: plugins/github-release
     pull: true
@@ -31,3 +22,12 @@ pipeline:
     when:
       event: [ tag ]
       branch: [ refs/tags/* ]
+
+  facebook:
+    image: appleboy/drone-facebook
+    pull: true
+    to: 1234973386524610
+    fb_page_token: ${FB_PAGE_TOKEN}
+    fb_verify_token: ${FB_VERIFY_TOKEN}
+    when:
+      status: [ success, failure ]
