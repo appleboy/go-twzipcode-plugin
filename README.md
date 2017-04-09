@@ -1,6 +1,6 @@
 # go-twzipcode-plugin
 
-Go plugin with TWZipCode
+Go plugin with TWZipCode. This plugin support is currently only available on **Linux**. 
 
 ## Installation
 
