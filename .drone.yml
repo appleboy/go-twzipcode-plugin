@@ -24,6 +24,7 @@ pipeline:
 
   github:
     image: plugins/github-release
+    pull: true
     api_key: ${GITHUB_RELEASE_API_KEY}
     files:
       - go-twzipcode.so
